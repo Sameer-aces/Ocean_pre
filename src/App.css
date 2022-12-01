@@ -1,0 +1,543 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+select,
+button {
+  font-family: "Roboto", sans-serif;
+}
+.dropzone {
+  width: 320px;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.bg-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("images/bg.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+h1 {
+  font-size: 35px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(202, 192, 192);
+}
+.h1 {
+  width: 30px;
+  padding: 10px;
+}
+.logo {
+  width: 100%;
+  height: 75%;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.drag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+}
+.line {
+  font-weight: 100;
+  font-size: 20px;
+  word-spacing: 2px;
+}
+
+.homebtn {
+  background-color: rgb(33, 77, 221);
+  color: aliceblue;
+  border: 4px solid white;
+  border-radius: 3px 25px 25px 3px;
+  padding: 20px;
+  margin: 40px;
+  width: 190px;
+  height: 120px;
+  cursor: pointer;
+  font-size: 20px;
+  cursor: pointer;
+}
+.homebtn:hover {
+  background-color: rgb(72, 115, 234);
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+/*input{
+
+ border: 14px black;
+ height: 0px;
+ align-items: center;
+ 
+ cursor: pointer;
+}
+
+.input{
+    width: 70%;
+    height:100px;
+    color: black;
+    margin: 10px auto;
+    padding: 20px;
+    align-items: center;
+    border: 4px solid rgb(255, 255, 255);
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 4px 20px 20px 4px;
+}
+.btn:hover{
+    background-color: rgb(28, 52, 131);
+    
+
+}
+.link{
+    color: black;
+    font-size: 100px;
+}
+
+/*sheet*/
+
+.display {
+  padding: 10px;
+  border: 0.5px solid black;
+  margin: 3px;
+  height: auto;
+}
+
+.First-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+select {
+  margin: 5px;
+  padding: 3px;
+  height: 35px;
+  background-color: #5d6d7e;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+  border: 2px solid;
+  border-radius: 8px;
+}
+option {
+  cursor: pointer;
+}
+
+.HeaderLink {
+  color: white;
+}
+.HeaderLink:hover {
+  color: black;
+}
+.HeaderBtn {
+  margin: 5px;
+  padding: 3px;
+  height: 35px;
+  background-color: #5d6d7e;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 13px;
+  border: 2px solid;
+  border-radius: 8px;
+}
+.HeaderBtn:hover {
+  border: 2px solid black;
+}
+.Second-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3px;
+}
+
+h3 {
+  margin-left: 30px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+  border: 0.1px solid black;
+}
+h3:hover {
+  border: 0.1px solid black;
+  border-radius: 10px;
+}
+
+/* .vl{
+  border-left: 2px solid black;
+  height:80vh;  
+  width: 0px;
+
+}  */
+
+.third-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+}
+
+.field {
+  padding: 20px;
+  height: 83vh;
+  border-right: 1px solid rgb(10, 10, 10);
+}
+
+.datafield {
+  background-color: rgb(41, 37, 31);
+}
+.filter {
+  padding: 20px;
+  border-right: 1px solid rgb(10, 10, 10);
+  height: 82vh;
+}
+
+.fileName {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid none;
+  margin-left: 0px;
+  width: auto;
+  font-size: 15px;
+}
+.footer button {
+  font-size: 15px;
+  padding: 3px;
+  margin: 1px;
+  cursor: pointer;
+}
+.Dashboard {
+  display: flex;
+}
+.Sheets {
+  display: block;
+  width: 200px;
+  border-right: 2px solid black;
+}
+.AllSheets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.sheetName {
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 20px;
+  width: 20%;
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 10px;
+  font-size: 15px;
+  /* background-color: black; */
+  color: black;
+}
+.sheetName:hover {
+  background-color: #5d6d7e;
+  color: white;
+}
+
+.dataSource {
+  display: flex;
+}
+.dataSourcesheets {
+  display: block;
+  height: 88vh;
+  color: Black;
+  text-align: center;
+  width: 18%;
+  border-right: 1px solid black;
+}
+
+.dropFile {
+  /* border-bottom: 2px solid black; */
+  height: 340px;
+  width: 100%;
+}
+.dropBlock {
+  border: 2px solid black;
+  width: 20%;
+  height: 30px;
+  margin: 20px;
+  padding: 5px;
+}
+
+.preview-th {
+  padding: 4px;
+  border: 2px solid black;
+  height: 0px;
+}
+table {
+  background-color: #202020;
+  font-size: 13px;
+}
+tr {
+  background-color: #f1f1f1;
+}
+.header {
+  background-color: rgb(255, 117, 138);
+}
+.headerKeys {
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+
+  height: 10px;
+}
+.Keys {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 2px;
+  height: 0px;
+}
+.UnionFiles {
+  display: none;
+  /* margin: 10px; */
+  border: 2px solid black;
+  font-size: 18px;
+  width: 50%;
+  height: 170px;
+  border-radius: 20px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.UnionFile1 {
+  border: 8px solid black;
+  border-radius: 50%;
+  /* padding: 50px;
+   */
+  text-align: center;
+
+  font-size: 17px;
+  height: 95%;
+  width: 33%;
+}
+.UnionFile2 {
+  border: 8px solid black;
+  border-radius: 50%;
+  padding: 0px;
+  text-align: center;
+  font-size: 17px;
+  height: 95%;
+  width: 33%;
+  margin-left: -70px;
+}
+.interSection {
+  display: none;
+  font-size: 15px;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  padding: 50px;
+  height: 0;
+  width: 0;
+  margin-left: -120px;
+}
+
+.Granularity-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+.granularity-color {
+  display: block;
+  justify-content: center;
+  border: 1px solid black;
+  font-size: 15px;
+  align-items: center;
+}
+.granularity-color p {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.br {
+  display: block;
+}
+.R {
+  color: Red;
+  font-size: 20px;
+  font-weight: bold;
+}
+.G {
+  color: rgb(0, 255, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+.B {
+  color: Blue;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* filter.js */
+.filterOptions {
+  border: 1px solid black;
+}
+.filterOptions:hover {
+  background-color: aqua;
+}
+/*Modals*/
+.modalHeader {
+  font-size: 18px;
+  margin-top: 8px;
+}
+.modalStyle {
+  background-color: #ffffff;
+  width: 580px;
+  height: 320px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+.modalInput {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 3px;
+  margin: 3px;
+}
+.modalTitle {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.modalButton {
+  margin: 2px;
+  padding: 5px;
+  cursor: pointer;
+  height: 32px;
+}
+.modalApplyBtn {
+  float: right;
+  margin: 20px;
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(75, 14, 218);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.modalApplyBtn:hover {
+  background-color: rgb(231, 221, 255);
+  color: #202020;
+}
+.all3Components {
+  display: flex;
+}
+/* Rename MOdal Style*/
+.RenameModal {
+  background-color: #ffffff;
+  width: 420px;
+  height: 160px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: #5d6d7e;
+}
+.renameInput {
+  display: flex;
+  width: 100%;
+  margin: 8px 0px 0px 0px;
+  text-align: left;
+  padding: 2px;
+}
+
+.contextMenuBox {
+  background-color: #d9e1ea;
+}
+
+/* Story*/
+.storyPage {
+  height: 88vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 20px;
+}
+.StoryContainer {
+  display: block;
+}
+.StoryContainerBtn {
+  margin-left: -300px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+.StoryContainerPlot {
+  background-color: rgba(24, 255, 101, 0.2);
+  margin-left: -530px;
+  border: 1px solid black;
+  height: 520px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 20px;
+}
+.SheetNames {
+  width: 200px;
+  height: 88vh;
+  border-right: 2px solid black;
+}
+.storyDisplay {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  width: 589px;
+}
+.storyDropBlock {
+  display: block;
+  border: 1px solid black;
+  height: 60px;
+  width: 150px;
+  margin: 3px;
+  padding: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.storyDropBlock :active {
+  background-color: aqua;
+}
+.Story-Container-Btn {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 3px;
+  height: 60px;
+  width: 150px;
+  background-color: #5d6d7e;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
